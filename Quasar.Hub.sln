@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{45A58335-4D52-451B-883B-2DF848A6D892}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Quasar.Hub", "src\Quasar.Hub\Quasar.Hub.csproj", "{AE5FF041-F7CC-4B36-9BBE-FB5A4EE47BFD}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "_build", "build\_build.csproj", "{85425686-D9E1-460C-BEEC-18369AE8BD9A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{AE5FF041-F7CC-4B36-9BBE-FB5A4EE47BFD} = {45A58335-4D52-451B-883B-2DF848A6D892}
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{85425686-D9E1-460C-BEEC-18369AE8BD9A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{85425686-D9E1-460C-BEEC-18369AE8BD9A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AE5FF041-F7CC-4B36-9BBE-FB5A4EE47BFD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AE5FF041-F7CC-4B36-9BBE-FB5A4EE47BFD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AE5FF041-F7CC-4B36-9BBE-FB5A4EE47BFD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AE5FF041-F7CC-4B36-9BBE-FB5A4EE47BFD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

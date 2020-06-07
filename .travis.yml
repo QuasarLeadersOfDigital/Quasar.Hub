@@ -1,0 +1,38 @@
+language: csharp
+os: linux
+mono: none
+sudo: required
+dotnet: 3.1
+
+addons:
+  apt:
+    sources:
+      - sourceline: 'deb [arch=amd64] https://packages.microsoft.com/repos/microsoft-ubuntu-trusty-prod trusty main'
+        key_url: 'https://packages.microsoft.com/keys/microsoft.asc'
+    packages:
+      - dpkg
+      - gettext
+      - libcurl4-openssl-dev
+      - libicu-dev
+      - libssl-dev
+      - libunwind8
+
+git:
+  depth: false
+
+jobs:
+  include:
+    - stage: debug_build
+      script: ./build.sh compile+test --configuration Debug
+    - stage: build
+      script: ./build.sh compile+test --configuration Release
+    - stage: deploy
+      script: ./build.sh deploy --dockerHubUrl $DockerHubUrl --dockerHubUsername $DockerHubUsername --dockerHubPassword $DockerHubPassword --configuration Release
+
+stages:
+  - name: debug_build
+    if: branch != master
+  - name: build
+    if: branch = master
+  - name: deploy
+    if: branch = master
